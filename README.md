@@ -3,7 +3,7 @@
 
 Graphs, top gainers and losers of the last 24 hours, will allow you to follow up crypto world instantly and make things easier for you. You will be able to reach all cryptos on market section. There will be a watchlist, so you can follow your favorite cryptocurrencies. In addition, there will be a converter that can convert all the coins to each other.
 
-*Coinmarkt, the crypto world is at your fingertips."
+*Coinmarkt, the crypto world is at your fingertips.*
 
 We can list the features in the application as follows:
 
