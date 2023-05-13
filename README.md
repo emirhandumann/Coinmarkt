@@ -15,4 +15,4 @@ We can list the features in the application as follows:
 
 The application will be written in the **Kotlin** programming language. **Firebase Authentication** will be used for user authentication. The application will use a **REST API** for live datas and graphs which its resource is CoinMarketCap API. If necessary, the other technologies can be used.
 
-The prototype of the application created with Figma is [HERE](https://www.figma.com/file/zyFtXI3d0dG8LCHOrFEdTB/Coinmarkt?type=design&node-id=27%3A2215&t=aORw56E2ijmm1cGp-1).
+The prototype of the application created with Figma is [HERE](https://www.figma.com/proto/zyFtXI3d0dG8LCHOrFEdTB/Coinmarkt?type=design&node-id=27-2216&scaling=scale-down&page-id=27%3A2215&starting-point-node-id=27%3A2216).
