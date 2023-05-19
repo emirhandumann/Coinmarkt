@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
             //finish this activity
             finish()
-        },5000)
+        },2000)
 
     }
 }

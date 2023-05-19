@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".SignInActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Sign Up"
+        android:text="Sign In"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
         android:layout_margin="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_pass">
@@ -59,49 +59,14 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutPasswordConfirm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword"
-        app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/ic_pass">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPasswordConfirm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:hint="Confirm" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
-        android:id="@+id/buttonSignUp"
+        android:id="@+id/buttonSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Sign Up"
+        android:text="Sign In"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPasswordConfirm" />
-
-    <TextView
-        android:id="@+id/textViewHaveAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="You have an already an account?"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayoutPasswordConfirm"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp"
-        />
-
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
