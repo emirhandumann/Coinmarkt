@@ -24,7 +24,16 @@ class SignInActivity : AppCompatActivity() {
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val createAccount = binding.textViewCreateAccount
 
+        createAccount.setOnClickListener {
+            //go to sign up activity
+            val intent = Intent(this,SignUpActivity::class.java)
+            startActivity(intent)
+
+            //finish this activity
+            finish()
+        }
 
 
         auth = Firebase.auth
