@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/marketFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_store"
+        android:title="@string/market"/>
+    <item
+        android:id="@+id/watchlistFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_star"
+        android:title="@string/watchlist"/>
+    <item
+        android:id="@+id/convertFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_calculate"
+        android:title="@string/convert"/>
+
+</menu>

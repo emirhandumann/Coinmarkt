@@ -51,8 +51,8 @@ class SignUpActivity : AppCompatActivity() {
                         auth.signOut()
                         Toast.makeText(this,"Account is created successfully",Toast.LENGTH_SHORT).show()
 
-                        // go to market activity
-                        val intent = Intent(this,MarketActivity::class.java)
+                        // go to main activity
+                        val intent = Intent(this,MainActivity::class.java)
                         startActivity(intent)
 
                         //finish this activity

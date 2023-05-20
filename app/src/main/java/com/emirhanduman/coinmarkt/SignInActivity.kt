@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
-import android.widget.TextView
 import android.widget.Toast
 import com.emirhanduman.coinmarkt.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -51,8 +50,8 @@ class SignInActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
                         Toast.makeText(this,"Successfully sign in",Toast.LENGTH_SHORT).show()
 
-                        //go to market activity
-                        val intent = Intent(this,MarketActivity::class.java)
+                        //go to main activity
+                        val intent = Intent(this,MainActivity::class.java)
                         startActivity(intent)
 
                         //finish this activity
