@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/homeFragment"
         android:enabled="true"
         android:icon="@drawable/ic_home"
-        android:title="@string/home"/>
+        android:title="@string/home"
+        app:showAsAction="always"/>
     <item
         android:id="@+id/marketFragment"
         android:enabled="true"
         android:icon="@drawable/ic_store"
-        android:title="@string/market"/>
+        android:title="@string/market"
+        app:showAsAction="always"/>
     <item
         android:id="@+id/watchlistFragment"
         android:enabled="true"
         android:icon="@drawable/ic_star"
-        android:title="@string/watchlist"/>
+        android:title="@string/watchlist"
+        app:showAsAction="always"/>
     <item
         android:id="@+id/convertFragment"
         android:enabled="true"
         android:icon="@drawable/ic_calculate"
-        android:title="@string/convert"/>
+        android:title="@string/convert"
+        app:showAsAction="always"/>
 
 </menu>

@@ -9,7 +9,7 @@ import android.os.Looper
 class OpeningActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_opening)
 
         //There won't be action bar in main activity
         supportActionBar?.hide()
