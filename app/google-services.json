@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "978699823211",
+    "project_id": "coinmarkt-15658",
+    "storage_bucket": "coinmarkt-15658.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978699823211:android:c7fc56b820767b7af3692e",
+        "android_client_info": {
+          "package_name": "com.emirhanduman.coinmarkt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978699823211-200fc7qkrte3g8v33s47pvup96r0d8i1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emirhanduman.coinmarkt",
+            "certificate_hash": "9381bcf8873d5cfbae29ea7a473484ae2117260d"
+          }
+        },
+        {
+          "client_id": "978699823211-pavfvsb1mk8963k3o6b2srvpstdqvhim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUQWnnxr8NiW91ExW42yFTYqpCnRvcv_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978699823211-pavfvsb1mk8963k3o6b2srvpstdqvhim.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
