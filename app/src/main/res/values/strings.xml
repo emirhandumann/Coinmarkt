@@ -17,4 +17,6 @@
     <string name="_1d">1 day</string>
     <string name="_1w">1 week</string>
     <string name="_1m">1 month</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
