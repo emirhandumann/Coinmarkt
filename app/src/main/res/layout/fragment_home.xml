@@ -22,15 +22,6 @@
         app:cardBackgroundColor="@color/md_theme_light_onPrimaryContainer"
         tools:ignore="WebViewLayout">
 
-        <WebView
-            android:id="@+id/btcChartWebView"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
-
     </androidx.cardview.widget.CardView>
 
 

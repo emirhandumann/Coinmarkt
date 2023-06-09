@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.emirhanduman.coinmarkt.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/marketFragment"
         android:name="com.emirhanduman.coinmarkt.fragment.MarketFragment"
@@ -25,4 +29,14 @@
         android:name="com.emirhanduman.coinmarkt.fragment.ConvertFragment"
         android:label="fragment_convert"
         tools:layout="@layout/fragment_convert" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.emirhanduman.coinmarkt.fragment.DetailsFragment"
+        android:label="DetailsFragment" >
+        <argument
+            android:name="data"
+            app:argType="com.emirhanduman.coinmarkt.models.CryptoCurrency"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
 </navigation>
