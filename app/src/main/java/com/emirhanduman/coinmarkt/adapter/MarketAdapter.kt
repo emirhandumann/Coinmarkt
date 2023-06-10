@@ -10,9 +10,10 @@ import com.bumptech.glide.Glide
 import com.emirhanduman.coinmarkt.R
 import com.emirhanduman.coinmarkt.databinding.CurrencyItemLayoutBinding
 import com.emirhanduman.coinmarkt.fragment.HomeFragmentDirections
+import com.emirhanduman.coinmarkt.fragment.MarketFragmentDirections
 import com.emirhanduman.coinmarkt.models.CryptoCurrency
 
-class MarketAdapter(var context: Context, var list: List<CryptoCurrency>) : RecyclerView.Adapter<MarketAdapter.MarketViewHolder>() {
+class MarketAdapter(var context: Context, var list: List<CryptoCurrency>, var type: String) : RecyclerView.Adapter<MarketAdapter.MarketViewHolder>() {
 
     //view holder
     inner class MarketViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -47,17 +48,31 @@ class MarketAdapter(var context: Context, var list: List<CryptoCurrency>) : Recy
             holder.binding.currencyChangeTextView.text = "${String.format("%.2f", item.quotes[0].percentChange24h)} %"
         }
 
+        //nav from home or market fragment to details fragment
         holder.itemView.setOnClickListener {
-            findNavController(it).navigate(
-                HomeFragmentDirections.actionHomeFragmentToDetailsFragment(item)
-            )
-        }
 
+            if (type == "home"){
+                findNavController(it).navigate(
+                    HomeFragmentDirections.actionHomeFragmentToDetailsFragment(item)
+                )
+            }else if (type == "market"){
+                findNavController(it).navigate(
+                    MarketFragmentDirections.actionMarketFragmentToDetailsFragment(item)
+                )
+            }
+
+        }
     }
 
     //get item count
     override fun getItemCount(): Int {
         return list.size
+    }
+
+    //update list
+    fun updateData(dataItem: List<CryptoCurrency>){
+        list = dataItem
+        notifyDataSetChanged()
     }
 
 

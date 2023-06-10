@@ -18,12 +18,20 @@
         android:id="@+id/marketFragment"
         android:name="com.emirhanduman.coinmarkt.fragment.MarketFragment"
         android:label="fragment_market"
-        tools:layout="@layout/fragment_market" />
+        tools:layout="@layout/fragment_market" >
+        <action
+            android:id="@+id/action_marketFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/watchlistFragment"
         android:name="com.emirhanduman.coinmarkt.fragment.WatchlistFragment"
         android:label="fragment_watchlist"
-        tools:layout="@layout/fragment_watchlist" />
+        tools:layout="@layout/fragment_watchlist" >
+        <action
+            android:id="@+id/action_watchlistFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/convertFragment"
         android:name="com.emirhanduman.coinmarkt.fragment.ConvertFragment"
