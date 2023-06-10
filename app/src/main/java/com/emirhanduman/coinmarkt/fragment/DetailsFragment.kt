@@ -1,6 +1,7 @@
 package com.emirhanduman.coinmarkt.fragment
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -13,6 +14,9 @@ import com.bumptech.glide.Glide
 import com.emirhanduman.coinmarkt.R
 import com.emirhanduman.coinmarkt.databinding.FragmentDetailsBinding
 import com.emirhanduman.coinmarkt.models.CryptoCurrency
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.lang.reflect.Type
 import kotlin.math.log
 
 class DetailsFragment : Fragment() {
@@ -20,6 +24,11 @@ class DetailsFragment : Fragment() {
     lateinit var binding : FragmentDetailsBinding
 
     private val item : DetailsFragmentArgs by navArgs()
+
+    var watchList : ArrayList<String>? = null
+
+    var watchListIsChecked = false
+
 
 
     override fun onCreateView(
@@ -35,8 +44,12 @@ class DetailsFragment : Fragment() {
 
         loadChart(data)
 
+        addWatchlist(data)
+
         return binding.root
     }
+
+
 
     //set up details
     private fun setUpDetails(data: CryptoCurrency) {
@@ -87,6 +100,61 @@ class DetailsFragment : Fragment() {
                     "{}&overrides={}&enabled_features=[]&disabled_features=[]&locale=en&utm_source=" +
                     "coinmarketcap.com&utm_medium=widget&utm_campaign=chart&utm_term=BTCUSDT"
         )
+    }
+
+    private fun addWatchlist(data: CryptoCurrency) {
+
+        readData()
+
+        // check if crypto is in watchlist
+        watchListIsChecked = if (watchList!!.contains(data.symbol)) {
+            // if crypto is in watchlist, set ic_star
+            binding.addWatchlistButton.setImageResource(R.drawable.ic_star)
+            true
+        } else {
+            // if crypto is not in watchlist, set ic_star_outline
+            binding.addWatchlistButton.setImageResource(R.drawable.ic_star_outline)
+            false
+        }
+
+        binding.addWatchlistButton.setOnClickListener {
+            // if crypto is not in watchlist, add crypto to watchlist and set ic_star
+            watchListIsChecked =
+                if (!watchListIsChecked) {
+                    if (!watchList!!.contains(data.symbol)) {
+                        watchList!!.add(data.symbol)
+                    }
+                    storeData()
+                    binding.addWatchlistButton.setImageResource(R.drawable.ic_star)
+                    true
+                }
+                // if crypto is in watchlist, remove crypto from watchlist and set ic_star_outline
+                else {
+                    binding.addWatchlistButton.setImageResource(R.drawable.ic_star_outline)
+                    watchList!!.remove(data.symbol)
+                    storeData()
+                    false
+                }
+        }
+    }
+
+    // read data from shared preferences and convert to ArrayList
+    private fun readData() {
+        val sharedPreferences = requireContext().getSharedPreferences("watchlist", Context.MODE_PRIVATE)
+        val gson = Gson()
+        val json = sharedPreferences.getString("watchlist", ArrayList<String>().toString())
+        val type = object : TypeToken<ArrayList<String>>() {}.type
+        watchList = gson.fromJson(json, type)
+    }
+
+    // store data to shared preferences as json
+    private fun storeData() {
+        val sharedPreferences = requireContext().getSharedPreferences("watchlist", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val gson = Gson()
+        val json = gson.toJson(watchList)
+        editor.putString("watchlist", json)
+        editor.apply()
     }
 
 }
