@@ -17,6 +17,8 @@ The application wrote in the **Kotlin** programming language. **Firebase Authent
 
 The prototype of the application created with Figma is [HERE](https://www.figma.com/proto/zyFtXI3d0dG8LCHOrFEdTB/Coinmarkt?type=design&node-id=27-2216&scaling=scale-down&page-id=27%3A2215&starting-point-node-id=27%3A2216).
 
+Link of the project presentation: [HERE](https://youtu.be/LSBhAvACJeE).
+
 Login Information:
   Email: abc@abc.com
   Password: 12345678
