@@ -94,14 +94,13 @@
         android:id="@+id/textViewHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You have an already an account?"
         android:layout_marginTop="20dp"
+        android:text="You have already an account?"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="@+id/textInputLayoutPasswordConfirm"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
